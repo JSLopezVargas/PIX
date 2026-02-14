@@ -1,12 +1,12 @@
 # **Automation: Stock Management & Reporting (PIX RPA)**
 
-Este proyecto automatiza de extremo a extremo el procesamiento de inventarios diarios de una tienda, integrando bases de datos locales, almacenamiento en la nube de Microsoft, reportes de Excel y envío por GForms.
+Este proyecto automatiza de extremo a extremo el procesamiento de inventarios diarios de una tienda, integrando bases de datos locales, almacenamiento en la nube de Microsoft, reportes de Excel y envío de reportes por GForms.
 
 ## **📝 Descripción del Proyecto**
 
 El bot ejecuta un flujo de trabajo modular diseñado para la integridad y trazabilidad de datos:
 
-1. Limpieza de entorno: Cierre automático de procesos (Google Chrome, Excel) para evitar bloqueos de archivos y sesiones huérfanas.
+1. Limpieza de entorno: Cierre automático de procesos (Google Chrome, Excel) para evitar bloqueos de ejecuciones por programas abiertos previamente.
 
 2. Sincronización de Datos: Procesamiento de información técnica y carga en base de datos SQLite.
 
@@ -14,7 +14,7 @@ El bot ejecuta un flujo de trabajo modular diseñado para la integridad y trazab
 
 4. Generación de Reportes: Exportación de resultados a un archivo Excel dinámico.
 
-5. Integración Microsoft Graph: Carga del reporte a OneDrive mediante autenticación OAuth2 (Método PUT).
+5. Integración Microsoft Graph: Carga del reporte y archivo JSON a OneDrive mediante autenticación OAuth2 (Método PUT).
 
 6. Cierre de Proceso: Registro de actividad y envío de evidencias en Google Forms.
 
@@ -24,7 +24,7 @@ El bot ejecuta un flujo de trabajo modular diseñado para la integridad y trazab
 
 2. Preparación del Navegador: * Abrir Google Chrome en una ventana normal (No incógnito).
 
-3. Asegurarse de tener la sesión de Google/Gmail iniciada, ya que el formulario requiere acceso a la cuenta.
+3. Asegurarse de tener la sesión de Google/Gmail iniciada, ya que el llenado del formulario requiere acceso a la cuenta.
 
 4. Lanzamiento: Ejecutar el archivo Main.pix desde PIX Studio.
 
@@ -46,10 +46,12 @@ El formulario de Google utilizado para la recolección de métricas es:
 
 👉 https://docs.google.com/forms/d/1nOAeCra_aGSJHlwpi3Hc5JRtWN-PKx7yXhqazd4S4qQ
 
-## **💡 Nota de QA para el Desplegador **
+## **💡 Nota de BA para el desplegador **
 
 Para garantizar que el bot interactúe correctamente con los elementos web:
 
 - No minimices la ventana de Chrome mientras el bot esté interactuando con el formulario.
 
 - Verifica que el bloqueador de anuncios (si tienes uno) no esté afectando la carga del formulario de Google.
+
+- En el repositorio se encuentra el diagrama BPMN del proceso en formato PNG y bpmn.
