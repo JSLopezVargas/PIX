@@ -1,0 +1,9 @@
+CREATE TABLE "Products" (
+	"id"	INTEGER,
+	"title"	TEXT,
+	"price"	NUMERIC,
+	"category"	TEXT,
+	"description"	TEXT,
+	"insertion_date"	BLOB DEFAULT (datetime('now', 'localtime')),
+	PRIMARY KEY("id")
+);
